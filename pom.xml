@@ -21,7 +21,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<resource>
 				<directory>*.*</directory>
 			</resource>
-		<defaultGoal>package</defaultGoal>
 	</build>
 	<dependencies>
 	</dependencies>
