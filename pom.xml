@@ -7,7 +7,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<description>Demo for Visual Basic 6.0</description>
 	<groupId>io.github.uwol</groupId>
 	<artifactId>visualbasic</artifactId>
-	<version>2.0.0<	/version>
+	<version>2.0.0</version>
 	<packaging>jar</packaging>
 	<licenses>
 		<license>
