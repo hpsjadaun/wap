@@ -5,23 +5,35 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   	<modelVersion>4.0.0</modelVersion>
 	<name>visualbasic</name>
 	<description>Demo for Visual Basic 6.0</description>
-	<groupId>io.github.uwol</groupId>
-	<artifactId>visualbasic</artifactId>
-	<version>2.0.0</version>
-	<packaging>jar</packaging>
-	<licenses>
-		<license>
-			<name>The BSD 3-Clause License</name>
-			<url>http://opensource.org/licenses/BSD-3-Clause</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<build>
-		<resources>
-			<resource>
-				<directory>*.*</directory>
-			</resource>
-	</build>
-	<dependencies>
-	</dependencies>
+  <groupId>com.rolfje.example</groupId>
+  <artifactId>executablestuff</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Some executable component</name>
+  <build>
+  <plugins>
+    <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>build-helper-maven-plugin</artifactId>
+    <version>1.8</version>
+    <executions>
+      <execution>
+      <id>attach-artifacts</id>
+      <phase>package</phase>
+      <goals>
+      <goal>attach-artifact</goal>
+      </goals>
+      <configuration>
+      <artifacts>
+        <artifact>
+        <file>${basedir}/Demo.exe</file>
+        <type>exe</type>
+        </artifact>
+      </artifacts>
+      </configuration>
+      </execution>
+    </executions>
+    </plugin>
+  </plugins>
+  </build>
 </project>  
