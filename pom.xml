@@ -12,15 +12,12 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <build>
   <plugins>
     <plugin>
-    <groupId>org.codehaus.mojo</groupId>
 	<dependency>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>build-helper-maven-plugin</artifactId>
     <version>1.8</version>
 	</dependency>
-    <artifactId>build-helper-maven-plugin</artifactId>
-    <version>1.8</version>
-    </plugin>
+   </plugin>
   </plugins>
   </build>
 </project>  
