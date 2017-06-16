@@ -13,25 +13,13 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <plugins>
     <plugin>
     <groupId>org.codehaus.mojo</groupId>
+	<dependency>
+    <groupId>org.codehaus.mojo</groupId>
     <artifactId>build-helper-maven-plugin</artifactId>
     <version>1.8</version>
-    <executions>
-      <execution>
-      <id>attach-artifacts</id>
-      <phase>package</phase>
-      <goals>
-      <goal>attach-artifact</goal>
-      </goals>
-      <configuration>
-      <artifacts>
-        <artifact>
-        <file>${basedir}/Demo.exe</file>
-        <type>exe</type>
-        </artifact>
-      </artifacts>
-      </configuration>
-      </execution>
-    </executions>
+	</dependency>
+    <artifactId>build-helper-maven-plugin</artifactId>
+    <version>1.8</version>
     </plugin>
   </plugins>
   </build>
