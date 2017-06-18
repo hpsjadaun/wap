@@ -1,10 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
-	       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	       <modelVersion>4.0.0</modelVersion>
-	       <artifactId>vb6</artifactId>
-	       <packaging>pom</packaging>
-		   <groupId>com.rolfje.example</groupId>
-	       <name>VB6 grammar</name>
-		   <version>1.0-SNAPSHOT</version>
-	</project>
+		   <groupId>DemoVB6</groupId>
+		   <artifactId>DemoVB6</artifactId>
+		   <version>1.0</version>
+		   <packaging>exe</packaging>
+		   <name>DemoVB6</name>
+	<build>
+    <directory>C:\Code\wap</directory>
+    <outputDirectory>C:\Code\wap</outputDirectory>
+    <finalName>C:\Code\wap</finalName>
+    <sourceDirectory>C:\Code\wap</sourceDirectory>
+ 	</build>	   
+</project>	
