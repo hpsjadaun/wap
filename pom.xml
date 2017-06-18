@@ -93,14 +93,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                     </additionalClasspathElements>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>native-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <executable>${java.home}/bin/java</executable>
-                </configuration>
-            </plugin>
         </plugins>
  	</build>	   
 </project>	
