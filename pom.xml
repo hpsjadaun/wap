@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <groupId>DemoVB6</groupId>
 		   <artifactId>DemoVB6</artifactId>
 		   <version>1.0</version>
-		   <packaging>pom</packaging>
+		   <packaging>jar</packaging>
 		   <name>DemoVB6</name>
 	<build>
     <directory>C:\Code\wap</directory>
@@ -13,6 +13,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <sourceDirectory>C:\Code\wap</sourceDirectory>
 	<pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -33,28 +38,23 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>1.8</version>
         </plugin>
-		 <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>exec-maven-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
       </plugins>
     </pluginManagement>
 	     <plugins>
-		<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <id>default-cli</id>
-                        <goals>
-                            <goal>exec</goal>                            
-                        </goals>
-                     </execution>
-                </executions>  
-            </plugin>
-	            <plugin>
+		 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+            <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
