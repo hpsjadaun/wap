@@ -6,106 +6,35 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <version>1.0</version>
 		   <packaging>jar</packaging>
 		   <name>DemoVB6</name>
-	<build>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<vb.exec>C:\Program Files (x86)\Microsoft Visual Studio\VB98\VB6.EXE</vb.exec>
+	</properties>
+<build>
     <directory>C:\Code\wap</directory>
     <outputDirectory>C:\Code\wap</outputDirectory>
     <finalName>MyDemo</finalName>
     <sourceDirectory>C:\Code\wap</sourceDirectory>
 	<pluginManagement>
       <plugins>
-	   <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-shade-plugin</artifactId>
-          <version>1.6</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.7</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>build-helper-maven-plugin</artifactId>
-          <version>1.8</version>
-        </plugin>
-		 <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
           <version>1.2.1</version>
         </plugin>
       </plugins>
     </pluginManagement>
-	     <plugins>
-		 		 <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <id>unpack-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${java.home}/../bin/javafxpackager</executable>
-                            <arguments>
-                                <argument>-createjar</argument>
-                                <argument>-nocss2bin</argument>
-                                <argument>-appclass</argument>
-                                <argument>${mainClass}</argument>
-                                <argument>-srcdir</argument>
-                                <argument>${project.build.directory}/classes</argument>
-                                <argument>-outdir</argument>
-                                <argument>${project.build.directory}</argument>
-                                <argument>-outfile</argument>
-                                <argument>${project.build.finalName}.jar</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>default-cli</id>
-                        <goals>
-                            <goal>exec</goal>                            
-                        </goals>
-                        <configuration>
-                            <executable>${java.home}/bin/java</executable>
-                        </configuration>
-                    </execution>
-                </executions>  
-            </plugin>
-		<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
-        </plugins>
- 	</build>	   
+	<plugin>
+	      <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+            </executions>
+	</plugin>
+	</build>	   
 </project>	
