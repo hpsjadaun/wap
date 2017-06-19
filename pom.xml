@@ -4,11 +4,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <groupId>DemoVB6</groupId>
 		   <artifactId>DemoVB6</artifactId>
 		   <version>1.0</version>
-		   <packaging>jar</packaging>
+		   <packaging>exe</packaging>
 		   <name>DemoVB6</name>
 	<build>
     <directory>C:\Code\wap</directory>
-    <outputDirectory>C:\Code\wap\target</outputDirectory>
+    <outputDirectory>C:\Code\wap</outputDirectory>
     <finalName>MyDemo</finalName>
     <sourceDirectory>C:\Code\wap</sourceDirectory>
 	<pluginManagement>
@@ -38,6 +38,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>1.8</version>
         </plugin>
+		 <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 	     <plugins>
@@ -49,7 +54,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					<execution>
 						<id>attach-sources</id>
 						<goals>
-							<goal>jar</goal>
+							<goal>exe</goal>
 						</goals>
 					</execution>
 				</executions>
