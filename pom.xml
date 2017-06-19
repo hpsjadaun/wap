@@ -24,6 +24,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         </plugin>
       </plugins>
     </pluginManagement>
+	<plugins>
 	<plugin>
 	      <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
@@ -36,5 +37,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                 </execution>
             </executions>
 	</plugin>
-	</build>	   
+</plugins>
+</build>	   
 </project>	
