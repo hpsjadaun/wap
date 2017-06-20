@@ -14,6 +14,27 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <directory>C:\Code\wap</directory>
     <outputDirectory>C:\Code\wap</outputDirectory>
     <finalName>MyDemo</finalName>
-    <sourceDirectory>C:\Code\wap</sourceDirectory>
+    <sourceDirectory>C:\Code\wap</sourceDirectory>	
+	<plugins>
+	<plugin>
+	<groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+	<version>1.2.1</version>
+        <executions>
+			<execution>
+					<goals>
+						<goal>exec</goal>
+					</goals>
+					<configuration>
+						<executable>${vb.exec}</executable>
+					<arguments>
+						<argument>/make</argument>
+						<argument>C:\Code\wap\Demofrm.vbp</argument>
+					</arguments>
+					</configuration>
+				</execution>
+					</executions>  
+				</plugin>
+        </plugins>
 	</build>	   
 </project>	
