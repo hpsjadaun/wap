@@ -26,15 +26,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         </configuration>
         <executions>
           <execution>
-		  <execution>
 			<goals>
               <goal>exec</goal>
             </goals>
             <configuration>
               <arguments>
                 <argument>/p:Configuration=${vb.configuration}</argument>
-					<argument>/make</argument>
-					<argument>C:\Code\wap\Demofrm.vbp</argument>
+				<argument>/make</argument>
+				<argument>C:\Code\wap\Demofrm.vbp</argument>
               </arguments>
             </configuration>
           </execution>
