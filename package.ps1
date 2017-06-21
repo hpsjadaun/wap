@@ -1,6 +1,5 @@
-$source = "C:\Code"
-$destination = "C:\Code\out.zip"
+$source = "C:\Code\wap"
+$destination = "C:\Code\out2.zip"
 
-If(Test-path $destination) {Remove-item $destination}
 Add-Type -assembly "system.io.compression.filesystem"
-[io.compression.zipfile]::CreateFromDirectory($source, $destination)
+[io.compression.zipfile]::CreateFromDirectory($source, $destination)	
