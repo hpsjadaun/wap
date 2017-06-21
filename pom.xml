@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <groupId>DemoVB6</groupId>
 		   <artifactId>DemoVB6</artifactId>
 		   <version>1.0</version>
-		   <packaging>jar</packaging>
+		   <packaging>pom</packaging>
 		   <name>DemoVB6</name>	
 <build>
     <directory>C:\Code\wap</directory>
@@ -15,19 +15,19 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                    <configuration>
-                        <tasks>
-                            <ant antfile="build.bat" />
-                        </tasks>
-                    </configuration>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+			<executions>
+              <execution>
+                <id>runbatchfile</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <executable>C:\Code\wap\build.bat</executable>
+            </configuration>
+          </plugin>		
         </plugins>
 	</build>	   
 </project>	
