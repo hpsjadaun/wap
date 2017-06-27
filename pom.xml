@@ -8,7 +8,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <name>DemoVB6</name>	
 <build>
     <directory>C:\Code\wap</directory>
-    <outputDirectory>C:\Code\wap</outputDirectory>
+    <outputDirectory>C:\Code</outputDirectory>
     <finalName>MyDemo</finalName>
     <sourceDirectory>C:\Code\wap</sourceDirectory>
 	<plugins>
