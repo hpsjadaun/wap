@@ -1,2 +1,1 @@
-Cd /d C:\Program Files (x86)\Microsoft Visual Studio\VB98
-vb6 /make C:\Code\wap\Demofrm.vbp 
+"C:\Program Files (x86)\Microsoft Visual Studio\VB98\VB6.EXE" /make Demofrm.vbp
