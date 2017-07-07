@@ -1,4 +1,4 @@
-$source = "C:\Code\wap"
+ $source = "C:\Code\wap"
 $destination = "C:\Code\out2.zip"
 
 Add-Type -assembly "system.io.compression.filesystem"
