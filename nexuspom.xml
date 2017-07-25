@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                       <modelVersion>4.0.0</modelVersion>
+		       <groupId>DemoVB6</groupId>
+                       <artifactId>DemoVB6</artifactId>
+                       <version>1.0</version>   
+<distributionManagement>
+<repository>
+      <id>nexus</id>
+      <url>http://localhost:8081/repository/LDCDev/</url>
+</repository>
+</distributionManagement>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.7</version>
+            <executions>
+                <execution>
+                    <id>default-deploy</id>
+                    <phase>none</phase>
+                </execution>
+                <execution>
+                    <id>LDC-deploy</id>
+                    <phase>deploy</phase>
+                    <goals>
+                        <goal>deploy-file</goal>
+                    </goals>
+                   <configuration>
+                        <repositoryId>maven-releases</repositoryId>
+                        <url>http://localhost:8081/repository/LDCDev/</url>
+                        <groupId>LDC</groupId>
+                        <artifactId>LDC</artifactId>
+                        <version>1.0.0</version>
+                        <file>C:\Deploy\LDC.zip</file>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+   </plugins>
+  </build>                 
+</project>          
+
