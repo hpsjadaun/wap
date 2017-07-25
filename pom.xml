@@ -7,10 +7,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <packaging>pom</packaging>
 		   <name>DemoVB6</name>	
 <build>
-    <directory>C:\Code\wap</directory>
-    <outputDirectory>C:\Code\wap</outputDirectory>
-    <finalName>MyDemo</finalName>
-    <sourceDirectory>C:\Code\wap</sourceDirectory>
+    <directory>wap</directory>
+    <finalName>Regsiter</finalName>
+    <sourceDirectory>wap</sourceDirectory>
 	<plugins>
            <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -26,7 +25,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
               </execution>
             </executions>
             <configuration>
-              <executable>C:\Code\wap\build.bat</executable>
+              <executable>build.bat</executable>
             </configuration>
           </plugin>
         </plugins>
