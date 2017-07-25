@@ -6,6 +6,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <version>1.0</version>
 		   <packaging>pom</packaging>
 		   <name>DemoVB6</name>	
+<distributionManagement>
+<repository>
+      <id>nexus</id>
+      <url>http://localhost:8081/repository/LDCDev/</url>
+</repository>
+</distributionManagement>
 <build>
     <directory>wap</directory>
     <finalName>MyDemo</finalName>
@@ -28,28 +34,28 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
               <executable>build.bat</executable>
             </configuration>
           </plugin>
-		 <plugin>
-            <artifactId>exec-maven-plugin</artifactId>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.2.1</version>
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.7</version>
             <executions>
                 <execution>
-                    <id>My Command Runner</id>
-                    <phase>install</phase>
+                    <id>default-deploy</id>
+                    <phase>none</phase>
+                </execution>
+                <execution>
+                    <id>LDC-deploy</id>
+                    <phase>deploy</phase>
                     <goals>
-                        <goal>exec</goal>
+                        <goal>deploy-file</goal>
                     </goals>
-                    <configuration>
-                        <executable>"C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\PDCmdLn.exe"</executable>
-                        <arguments>
-                            <argument>C:\Reg\wap\Regstration.vbp</argument>
-							<argument>/p</argument>
-							<argument>"PackageSSP"</argument>
-							<argument>/d</argument>
-							<argument>DeployLDC</argument>
-							<argument>/l</argument>
-							<argument>C:\Code\Log1.log</argument>
-                        </arguments>
+                   <configuration>
+                        <repositoryId>maven-releases</repositoryId>
+                        <url>http://localhost:8081/repository/LDCDev/</url>
+                        <groupId>LDC</groupId>
+                        <artifactId>LDC</artifactId>
+                        <version>1.0.0</version>
+                        <file>C:\Deploy\LDC.zip</file>
                     </configuration>
                 </execution>
             </executions>
