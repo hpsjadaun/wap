@@ -8,26 +8,35 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		   <name>DemoVB6</name>	
 <build>
     <directory>wap</directory>
-    <finalName>Regsiter</finalName>
+    <finalName>MyDemo</finalName>
     <sourceDirectory>wap</sourceDirectory>
 	<plugins>
-           <plugin>
-          <groupId>org.codehaus.mojo</groupId>
+		 <plugin>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>1.2</version>
+            <groupId>org.codehaus.mojo</groupId>
+            <version>1.2.1</version>
             <executions>
-              <execution>
-                <id>runbatchfile</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>exec</goal>
-                </goals>
-              </execution>
+                <execution>
+                    <id>My Command Runner</id>
+                    <phase>install</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                        <executable>"C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\PDCmdLn.exe"</executable>
+                        <arguments>
+                            <argument>C:\Code\wap\Demofrm.vbp</argument>
+							<argument>/p</argument>
+							<argument>"PackageSSP"</argument>
+							<argument>/d</argument>
+							<argument>DeployLDC</argument>
+							<argument>/l</argument>
+							<argument>C:\Code\Log.log</argument>
+                        </arguments>
+                    </configuration>
+                </execution>
             </executions>
-            <configuration>
-              <executable>build.bat</executable>
-            </configuration>
-          </plugin>
+        </plugin>
         </plugins>
 	</build>	   
 </project>	
