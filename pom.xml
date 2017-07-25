@@ -11,6 +11,23 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <finalName>MyDemo</finalName>
     <sourceDirectory>wap</sourceDirectory>
 	<plugins>
+	       <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2</version>
+            <executions>
+              <execution>
+                <id>runbatchfile</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <executable>build.bat</executable>
+            </configuration>
+          </plugin>
 		 <plugin>
             <artifactId>exec-maven-plugin</artifactId>
             <groupId>org.codehaus.mojo</groupId>
@@ -25,13 +42,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                     <configuration>
                         <executable>"C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\PDCmdLn.exe"</executable>
                         <arguments>
-                            <argument>C:\Code\wap\Demofrm.vbp</argument>
+                            <argument>C:\Reg\wap\Regstration.vbp</argument>
 							<argument>/p</argument>
 							<argument>"PackageSSP"</argument>
 							<argument>/d</argument>
 							<argument>DeployLDC</argument>
 							<argument>/l</argument>
-							<argument>C:\Code\Log.log</argument>
+							<argument>C:\Code\Log1.log</argument>
                         </arguments>
                     </configuration>
                 </execution>
