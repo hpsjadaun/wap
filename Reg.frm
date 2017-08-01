@@ -56,7 +56,11 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-MsgBox "Thanks for Register"
+MsgBox "Thanks for Register in LDC"
+End Sub
+
+Private Sub Form_Load()
+
 End Sub
 
 Private Sub Text1_Change()
