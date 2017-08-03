@@ -32,49 +32,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					<executable>build.bat</executable>
 				</configuration>
               </execution>
-			  <execution>
-                <id>packagezip</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>exec</goal>
-                </goals>
-				<configuration>
-					<executable>C:\Program Files (x86)\WinRAR\WinRAR.exe</executable>
-					<arguments>
-						<argument>a</argument>
-						<argument>-ep1</argument>
-						<argument>C:\Deploy\LDC_Demo.zip</argument>
-						<argument>C:\Deploy\Deployment\</argument>
-					</arguments>
-				</configuration>
-              </execution>
 			 </executions>
-        </plugin>
-		<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>2.7</version>
-            <executions>
-                <execution>
-                    <id>default-deploy</id>
-                    <phase>none</phase>
-                </execution>
-                <execution>
-                    <id>LDC-deploy</id>
-                    <phase>deploy</phase>
-                    <goals>
-                        <goal>deploy-file</goal>
-                    </goals>
-                   <configuration>
-                        <repositoryId>maven-releases</repositoryId>
-                        <url>http://localhost:8081/repository/LDCDev/</url>
-                        <groupId>LDC</groupId>
-                        <artifactId>LDC_Demo</artifactId>
-                        <version>1.0.0</version>
-                        <file>C:\Deploy\LDC_Demo.zip</file>
-                    </configuration>
-                </execution>
-            </executions>
         </plugin>
 	    </plugins>
 	</build>	   
