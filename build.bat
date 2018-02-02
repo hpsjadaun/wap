@@ -1,2 +1,1 @@
 "C:\Program Files (x86)\Microsoft Visual Studio\VB98\VB6.EXE" /make Regstration.vbp
-"C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\PDCmdLn.exe" C:\Reg\wap\Regstration.vbp /p "PackageRegistration" /d DeployRegistration /l C:\Code\Log.log
