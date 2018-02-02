@@ -32,7 +32,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					<executable>build.bat</executable>
 				</configuration>
               </execution>
-			  <execution>
+			<!--  <execution>
                 <id>packagezip</id>
                 <phase>package</phase>
                 <goals>
@@ -47,10 +47,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 						<argument>C:\Deploy1\Deployment\</argument>
 					</arguments>
 				</configuration>
-              </execution>
-			 </executions>
+              </execution>-->
+			 </executions> 
         </plugin>
-		<plugin>
+	<!--	<plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-deploy-plugin</artifactId>
             <version>2.7</version>
@@ -73,7 +73,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                         <version>1.0.0</version>
                         <file>C:\Deploy1\LDC_Reg.zip</file>
                     </configuration>
-                </execution>
+                </execution> -->
             </executions>
         </plugin>
 	    </plugins>
