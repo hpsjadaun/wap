@@ -73,9 +73,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                         <version>1.0.0</version>
                         <file>C:\Deploy1\LDC_Reg.zip</file>
                     </configuration>
-                </execution> -->
+                </execution> 
             </executions>
-        </plugin>
+        </plugin> -->
 	    </plugins>
 	</build>	   
 </project>	
